@@ -6,6 +6,7 @@ import TextBox from "../../Components/TextBox";
 import RedButton from "../../Components/RedButton";
 import { SignUp1_1Style } from "./SignUp1_1Style";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 const SignUp1_1 = ({ navigation }) => {
   const [code1, setCode1] = useState("");
@@ -56,12 +57,12 @@ const SignUp1_1 = ({ navigation }) => {
           <Image source={ImagePath.backArrow} />
         </TouchableOpacity>
         <View>
-          <HeadText mainText="Enter the 4-digit code sent to you at 875 364 8947" />
+          <HeadText mainText={strings.EnterCode} />
         </View>
         <View>
           <TouchableOpacity>
             <Text style={SignUp1_1Style.editNumText}>
-              Edit my mobile number
+              {strings.EditNum}
             </Text>
           </TouchableOpacity>
         </View>
@@ -79,13 +80,13 @@ const SignUp1_1 = ({ navigation }) => {
       </View>
       <View style={SignUp1_1Style.bottomView}>
         <View>
-          <Text style={SignUp1_1Style.resendText}>Resend code in 0:14</Text>
+          <Text style={SignUp1_1Style.resendText}>{strings.Resend_Code}</Text>
           <View style={SignUp1_1Style.redBtnView}>
             <RedButton
               onPress={() => {
                 verifyBtn();
               }}
-              redBtnText={"VERIFY"}
+              redBtnText={strings.VERIFY}
             />
           </View>
         </View>

@@ -11,6 +11,7 @@ import ImagePath from "../../Constants/ImagePath";
 import GetStartedCard from "../../Components/GetStartedCard";
 import { GetStartedStyle } from "./GetStartedStyles";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 // create a component
 const GetStarted = ({ navigation }) => {
@@ -32,7 +33,7 @@ const GetStarted = ({ navigation }) => {
             navigation.navigate("Login");
           }}
         >
-          <Text style={GetStartedStyle.baseViewText}>GET STARTED</Text>
+          <Text style={GetStartedStyle.baseViewText}>{strings.GET_STARTED}</Text>
         </TouchableOpacity>
       </View>
     </WrapperContainer>

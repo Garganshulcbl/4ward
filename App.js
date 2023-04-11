@@ -6,6 +6,9 @@ import { checkStatus } from "./src/redux/actions/loginAction";
 import { getApi, postApi } from "./src/utils/utils";
 
 
+import Login1_1 from "./src/Screens/Login1_1/Login1_1";
+import Login from "./src/Screens/Login/Login";
+
 export default function App() {
   let data = {
     username: "honey",
@@ -37,11 +40,9 @@ export default function App() {
     <Provider store={store}>
       <Routes />
     </Provider>
-    // <MainStack/>
 
     // <Splash />
     // <GetStarted />
-
     // <Login1_1 />
     // <SignUp />
     // <SignUp1_1 />
@@ -55,6 +56,5 @@ export default function App() {
     // <EditProfile />
     // <Profile />
     // <ChangePassword />
-    // </NavigationContainer>
   );
 }

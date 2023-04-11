@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import color from '../Constants/color';
 
 // create a component
 const TextBox = ({Show, onPress,onChangeText,value, ...props }) => {
@@ -29,14 +30,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 48,
         borderRadius: 8,
-        backgroundColor: '#4C4C4C',
+        backgroundColor: color.matterHorn,
         fontSize: 14,
 
         alignItems: 'center'
     },
 
     textInputBox: {
-        color: '#FFFFFF',
+        color: color.white,
         
     },
 

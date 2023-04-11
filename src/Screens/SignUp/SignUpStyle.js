@@ -2,12 +2,7 @@ import { StyleSheet } from "react-native";
 import { moderateScale, moderateVerticalScale } from "react-native-size-matters";
 
 export const SignUpStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#2e2e2e',
-        padding: 24,
-    },
-
+    
     topView: {
         marginTop: 24,
         flex: 0.9,

@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import color from "../../Constants/color";
 
 export const ChangePasswordStyle = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#2e2e2e',
+        backgroundColor: color.mainBackgroundColor,
         padding: 24,
     },
     upperView: {
@@ -22,7 +23,7 @@ export const ChangePasswordStyle = StyleSheet.create({
 
     changePassText: {
         fontSize: 16,
-        color: '#FFFFFF'
+        color: color.white
     },
 
     passView: {

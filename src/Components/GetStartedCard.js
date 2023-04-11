@@ -1,7 +1,8 @@
 //import liraries
 import React from "react";
-import { View, Text, mage } from "react-native";
+import { View, Text, Image } from "react-native";
 import ImagePath from "../Constants/ImagePath";
+import color from "../Constants/color";
 
 // create a component
 const GetStartedCard = ({ leftMargin }) => {
@@ -13,7 +14,7 @@ const GetStartedCard = ({ leftMargin }) => {
           height: 647,
           marginTop: 30,
           marginLeft: leftMargin,
-          backgroundColor: "#4c4c4c",
+          backgroundColor: color.matterHorn,
           borderRadius: 25,
         }}
       >
@@ -28,7 +29,7 @@ const GetStartedCard = ({ leftMargin }) => {
         <Text
           style={{
             marginTop: 100,
-            color: "#FFFFFF",
+            color: color.white,
             textAlign: "center",
             fontSize: 22,
           }}
@@ -37,7 +38,7 @@ const GetStartedCard = ({ leftMargin }) => {
         </Text>
         <Text
           style={{
-            color: "#999999",
+            color: color.gray60,
             textAlign: "center",
             fontSize: 13,
             margin: 24,

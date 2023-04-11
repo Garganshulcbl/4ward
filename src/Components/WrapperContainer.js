@@ -1,11 +1,12 @@
 import { View } from "react-native";
+import color from "../Constants/color";
 
 export default function WrapperContainer({ children, wrapperStyle }) {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: "#2E2E2E",
+        backgroundColor: color.mainBackgroundColor,
         padding: 24,
         ...wrapperStyle
       }}

@@ -1,12 +1,7 @@
 import { StyleSheet } from "react-native"
+import color from "../../Constants/color"
 
 export const NotificationStyle = StyleSheet.create({
-    container: {
-        paddingVertical: 24,
-        paddingLeft: 24,
-        flex: 1,
-        backgroundColor: '#2E2E2E',
-    },
 
     notificationView: {
         marginTop: 38,
@@ -15,7 +10,7 @@ export const NotificationStyle = StyleSheet.create({
 
     notificationtext: {
         fontSize: 16,
-        color: '#FFFFFF'
+        color: color.white
     },
 
 })

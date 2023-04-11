@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import ImagePath from '../Constants/ImagePath';
+import color from '../Constants/color';
 
 // create a component
 const WhiteButton = ({ whiteBtnText, whiteBtnImage}) => {
@@ -15,7 +16,7 @@ const WhiteButton = ({ whiteBtnText, whiteBtnImage}) => {
                 <View>
                     <Text style={{
                         textAlign: 'center',
-                        color: '#17171A',
+                        color: color.darkestBlue,
                         fontSize: 14
                     }}>
                         {whiteBtnText}
@@ -31,7 +32,7 @@ const WhiteButton = ({ whiteBtnText, whiteBtnImage}) => {
 const styles = StyleSheet.create({
     container: {
         height: 48,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: color.white,
         alignItems: 'center',
         justifyContent: 'space-between',
         borderRadius: 8,

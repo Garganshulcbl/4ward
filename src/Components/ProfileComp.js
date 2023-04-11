@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, Text, StyleSheet, Touchable, TouchableOpacity } from "react-native";
 import ImagePath from "../Constants/ImagePath";
+import color from "../Constants/color";
 
 const ProfileComp = ({ addText, imgPath, onPress }) => {
     return (
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     addText: {
         marginLeft: 20,
         fontSize: 15,
-        color: '#FFFFFF'
+        color: color.white
     },
 
 })

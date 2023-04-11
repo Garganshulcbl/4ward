@@ -4,6 +4,7 @@ import ImagePath from "../../Constants/ImagePath";
 import TextBox from "../../Components/TextBox";
 import RedButton from "../../Components/RedButton";
 import { EditProfileStyle } from "./EditProfileStyle";
+import strings from "../../Constants/strings";
 
 export default function EditProfile({ navigation }) {
     return (
@@ -12,7 +13,7 @@ export default function EditProfile({ navigation }) {
                 <TouchableOpacity onPress={() => {navigation.goBack()}} style={EditProfileStyle.addInfoView}>
                     <Image source={ImagePath.backArrow} style={EditProfileStyle.addInfoImg} />
                     <Text style={EditProfileStyle.addInfoText}>
-                        Edit Profile
+                        {strings.Edit_Profile}
                     </Text>
                 </TouchableOpacity>
                 <View style={EditProfileStyle.profileImgView}>
@@ -40,7 +41,7 @@ export default function EditProfile({ navigation }) {
                 </View>
             </View>
             <View style={EditProfileStyle.redBtnView}>
-                <RedButton redBtnText={'SAVE CHANGES'} />
+                <RedButton redBtnText={strings.SAVE_CHANGES} />
             </View>
 
         </View >

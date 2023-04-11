@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import color from '../Constants/color';
 
 // create a component
 const RedButton = ({ redBtnText,onPress}) => {
@@ -9,7 +10,7 @@ const RedButton = ({ redBtnText,onPress}) => {
             <View style={styles.container}>
                 <Text style={{
                     textAlign: 'center',
-                    color: '#FFFFFF',
+                    color: color.white,
                     fontSize: 14
                 }}>
                     {redBtnText}
@@ -23,7 +24,7 @@ const RedButton = ({ redBtnText,onPress}) => {
 const styles = StyleSheet.create({
     container: {
         height: 48,
-        backgroundColor: '#F43738',
+        backgroundColor: color.darkred,
         justifyContent: 'center',
         borderRadius: 8,
     },

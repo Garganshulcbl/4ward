@@ -3,6 +3,7 @@ import {
   moderateScale,
   moderateVerticalScale,
 } from "react-native-size-matters";
+import color from "../../Constants/color";
 
 export const LoginStyle = StyleSheet.create({
   imageView: {
@@ -26,7 +27,7 @@ export const LoginStyle = StyleSheet.create({
   orText: {
     fontSize: 16,
     textAlign: "center",
-    color: "white",
+    color: color.white,
   },
 
   whiteBtnView: {
@@ -42,11 +43,11 @@ export const LoginStyle = StyleSheet.create({
   },
 
   newHereText: {
-    color: "#FFFFFF",
+    color: color.white,
     marginRight: 3,
   },
 
   signUpText: {
-    color: "#41CCFF",
+    color: color.soft_prince,
   },
 });

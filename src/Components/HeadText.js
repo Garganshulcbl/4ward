@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import color from '../Constants/color';
 
 // create a component
 const HeadText = ({ mainText, subText }) => {
@@ -13,7 +14,7 @@ const HeadText = ({ mainText, subText }) => {
             </View>
             <View style={styles.subText}>
                 
-                {subText ? <Text style={{ color: '#A6A6A6', fontSize: 15 }}>
+                {subText ? <Text style={{ color: color.quickSilver, fontSize: 15 }}>
                     {subText}
                 </Text> : null}
             </View>
@@ -25,7 +26,7 @@ const HeadText = ({ mainText, subText }) => {
 const styles = StyleSheet.create({
     mainText: {
         fontSize: 24,
-        color: '#ffffff',
+        color: color.white,
     },
     subText: {
         marginTop: 16.5,

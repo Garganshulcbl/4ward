@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import color from "../../Constants/color";
 
 export const GetStartedStyle = StyleSheet.create({
   container: {
-    backgroundColor: "#2e2e2e",
+    backgroundColor: color.mainBackgroundColor,
     flex: 1,
     padding: 24,
   },
@@ -21,7 +22,7 @@ export const GetStartedStyle = StyleSheet.create({
 
   baseViewText: {
     marginHorizontal: 24,
-    color: "#ffffff",
+    color: color.white,
     fontSize: 16,
     fontWeight: 400,
     marginBottom: 35,

@@ -9,6 +9,7 @@ import { Login1_1Style } from "./Login1_1Style";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { checkStatus } from "../../redux/actions/loginAction";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 // create a component
 
@@ -30,7 +31,6 @@ const Login1_1 = ({ navigation }) => {
       // await  AsyncStorage.setItem('usermobile', (mobile) )
       checkStatus(true);
     }
-    //tried
     else {
       alert("Fields can't be empty...");
     }
@@ -48,8 +48,8 @@ const Login1_1 = ({ navigation }) => {
           <Image source={ImagePath.backArrow} />
         </TouchableOpacity>
         <HeadText
-          mainText="Welcome back!"
-          subText="Create an account so you can continue."
+          mainText={strings.Welcome_Back}
+          subText={strings.CREATE_AC}
         />
       </View>
       <View style={Login1_1Style.upperView}>
@@ -85,16 +85,15 @@ const Login1_1 = ({ navigation }) => {
           </View>
         </View>
         <View style={Login1_1Style.otpView}>
-          <Text style={Login1_1Style.useOtpText}>Use OTP</Text>
+          <Text style={Login1_1Style.useOtpText}>{strings.Use_OTP}</Text>
           <TouchableOpacity>
-            <Text style={Login1_1Style.forgotPassText}>forgot Password</Text>
+            <Text style={Login1_1Style.forgotPassText}>{strings.Forgot_Password}</Text>
           </TouchableOpacity>
         </View>
       </View>
       <View style={Login1_1Style.lowerView}>
-        <RedButton redBtnText="LOGIN" onPress={() => storeLogin()} />
+        <RedButton redBtnText={strings.LOGIN} onPress={() => storeLogin()} />
       </View>
-      {/* </View> */}
     </WrapperContainer>
   );
 };

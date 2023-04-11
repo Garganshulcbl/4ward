@@ -12,6 +12,7 @@ import WhiteButton from "../../Components/WhiteBtn";
 import ImagePath from "../../Constants/ImagePath";
 import { PostDetailStyle } from "./PostDetailStyle";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 export default function PostDetail({ navigation }) {
   return (
@@ -28,7 +29,7 @@ export default function PostDetail({ navigation }) {
               style={PostDetailStyle.addImageImg}
             />
           </TouchableOpacity>
-          <Text style={PostDetailStyle.addImageText}>Add info</Text>
+          <Text style={PostDetailStyle.addImageText}>{strings.Add_info}</Text>
         </View>
         <View style={PostDetailStyle.plusView}>
           <Text style={PostDetailStyle.plusText}>+</Text>
@@ -48,7 +49,7 @@ export default function PostDetail({ navigation }) {
         </View>
       </View>
       <View style={PostDetailStyle.bottomView}>
-        <RedButton redBtnText={"POST"} />
+        <RedButton redBtnText={strings.POST} />
       </View>
     </WrapperContainer>
   );

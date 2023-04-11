@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, FlatList } from "react-native";
 import { HomeStyle } from "./HomeStyle";
 import ImagePath from "../../Constants/ImagePath";
 import HomeCard from "../../Components/HomeCard";
@@ -12,7 +12,9 @@ export default function Home() {
         <Image source={ImagePath.homeImage} style={HomeStyle.iconImg} />
         <Image source={ImagePath.locationIcon} style={HomeStyle.iconImg} />
       </View>
-      <HomeCard />
+      <View style={{ marginBottom: 117, paddingTop:0}}>
+        <HomeCard />
+      </View>
     </WrapperContainer>
   );
 }

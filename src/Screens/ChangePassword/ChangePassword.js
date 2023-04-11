@@ -4,6 +4,7 @@ import ImagePath from '../../Constants/ImagePath';
 import TextBox from '../../Components/TextBox';
 import RedButton from '../../Components/RedButton';
 import { ChangePasswordStyle } from './ChangePasswordStyle';
+import strings from '../../Constants/strings';
 
 export default function SetPassword({navigation}) {
     return (
@@ -14,7 +15,7 @@ export default function SetPassword({navigation}) {
                         <Image source={ImagePath.backArrow} />
                     </TouchableOpacity>
                     <View style={ChangePasswordStyle.changePassTextView}>
-                        <Text style={ChangePasswordStyle.changePassText}>Change Password</Text>
+                        <Text style={ChangePasswordStyle.changePassText}>{strings.Change_Password}</Text>
                     </View>
                 </View>
                 <View style={ChangePasswordStyle.passView}>
@@ -25,7 +26,7 @@ export default function SetPassword({navigation}) {
                 </View>
             </View>
             <View style={ChangePasswordStyle.lowerView}>
-                <RedButton redBtnText={'SAVE'} />
+                <RedButton redBtnText={strings.SAVE} />
             </View>
         </View>
     )

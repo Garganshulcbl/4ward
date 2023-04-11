@@ -1,11 +1,8 @@
 import { StyleSheet } from "react-native";
+import color from "../../Constants/color";
 
 export const Login1_1Style = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#2E2E2E',
-        padding: 24,
-    },
+   
 
     backArrow: {
         marginTop: 22,
@@ -48,12 +45,12 @@ export const Login1_1Style = StyleSheet.create({
     },
 
     useOtpText: {
-        color: '#FFFFFF',
+        color: color.white,
         fontSize: 13
     },
 
     forgotPassText: {
-        color: '#32C5FF',
+        color: color.dodger_blue,
         fontSize: 13
     },
 

@@ -1,11 +1,7 @@
 import { StyleSheet } from "react-native";
+import color from "../../Constants/color";
 
 export const ProfileStyle = StyleSheet.create({
-    container: {
-        padding: 24,
-        flex: 1,
-        backgroundColor: '#2E2E2E',
-    },
 
     topTextView: {
         marginTop: 32
@@ -13,7 +9,7 @@ export const ProfileStyle = StyleSheet.create({
 
     topText: {
         fontSize: 16,
-        color: '#FFFFFF',
+        color: color.white,
         marginBottom: 5
     },
 

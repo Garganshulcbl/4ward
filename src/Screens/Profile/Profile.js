@@ -6,6 +6,7 @@ import { ProfileStyle } from "./ProfileStyle";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { checkStatus } from "../../redux/actions/loginAction";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 export default function Profile({ navigation }) {
   const signOut = async () => {
@@ -17,7 +18,7 @@ export default function Profile({ navigation }) {
     //wrapperStyle={{backgroundColor:'grey'}}
     <WrapperContainer >
       <View style={ProfileStyle.topTextView}>
-        <Text style={ProfileStyle.topText}>Profile</Text>
+        <Text style={ProfileStyle.topText}>{strings.Profile}</Text>
       </View>
       <ProfileComp
         addText={"Edit Profile"}

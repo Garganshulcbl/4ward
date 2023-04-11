@@ -1,12 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const setPassStyle = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#2e2e2e',
-        padding: 24,
-    },
-
+    
     topView: {
         flex: 0.9,
         marginTop: 32

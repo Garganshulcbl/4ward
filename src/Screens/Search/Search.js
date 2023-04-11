@@ -13,7 +13,7 @@ export default function Search() {
         <TextBox placeholder={"Sector"} Show={"Enter location manually"} />
       </View>
       <View style={SearchStyle.suggestionsView}>
-        <Text style={SearchStyle.suggestionsText}>Suggestions</Text>
+        <Text style={SearchStyle.suggestionsText}>strings.Suggestions</Text>
       </View>
       <View>
         <AddressFlatlist flatdata={FlatlistDataSearch} />

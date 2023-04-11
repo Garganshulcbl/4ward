@@ -13,6 +13,8 @@ import TextBox from "../../Components/TextBox";
 import RedButton from "../../Components/RedButton";
 import { setPassStyle } from "./setPassStyle";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
+
 
 export default function SetPassword({ navigation }) {
   const [state, setState] = useState(true);
@@ -39,8 +41,8 @@ export default function SetPassword({ navigation }) {
         </TouchableOpacity>
         <View>
           <HeadText
-            mainText={"Set password"}
-            subText={"Create secure and unique password."}
+            mainText={strings.SetPass}
+            subText={strings.create_unique_pass}
           />
         </View>
         <View style={setPassStyle.passView}>
@@ -74,7 +76,7 @@ export default function SetPassword({ navigation }) {
           onPress={() => {
             getStartedBtn();
           }}
-          redBtnText={"GET STARTED"}
+          redBtnText={strings.GET_STARTED}
         />
       </View>
     </WrapperContainer>

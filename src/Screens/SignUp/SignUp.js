@@ -19,6 +19,7 @@ import {
 import HeadText from "../../Components/HeadText";
 import { SignUpStyle } from "./SignUpStyle";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 // create a component
 const SignUp = ({ navigation }) => {
@@ -66,8 +67,8 @@ const SignUp = ({ navigation }) => {
         </TouchableOpacity>
         <View>
           <HeadText
-            mainText="Create new account"
-            subText="Create an account so you can continue."
+            mainText={strings.New_account}
+            subText={strings.NewAccountContinue}
           />
           <View style={SignUpStyle.nameView}>
             <View style={SignUpStyle.nameViewFlex}>
@@ -118,7 +119,7 @@ const SignUp = ({ navigation }) => {
           onPress={() => {
             nextBtn();
           }}
-          redBtnText="NEXT"
+          redBtnText={strings.NEXT}
         />
       </TouchableOpacity>
     </WrapperContainer>

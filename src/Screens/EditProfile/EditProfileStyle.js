@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
+import color from "../../Constants/color";
 
 export const EditProfileStyle = StyleSheet.create({
     container: {
         padding: 24,
         flex: 1,
-        backgroundColor: '#2E2E2E',
+        backgroundColor: color.mainBackgroundColor,
     },
 
     topView: {
@@ -23,7 +24,7 @@ export const EditProfileStyle = StyleSheet.create({
     },
 
     addInfoText: {
-        color: '#FFFFFF',
+        color: color.white,
         fontSize: 16,
     },
 

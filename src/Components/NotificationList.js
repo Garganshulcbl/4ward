@@ -1,5 +1,6 @@
 import React from "react"
 import { View, Text, Image, FlatList, StyleSheet, } from "react-native";
+import color from "../Constants/color";
 
 
 
@@ -44,29 +45,29 @@ const styles = StyleSheet.create({
     },
 
     topText: {
-        color: '#F43738',
+        color: color.red,
         fontSize: 16
     },
 
     bottomText: {
-        color: '#FFFFFF',
+        color: color.white,
         fontSize: 16
     },
 
     timeView: {
         marginLeft: 16,
-        borderBottomColor: '#979797',
+        borderBottomColor: color.ford_gray,
         paddingBottom: 20,
         borderBottomWidth: 1,
         width:'100%'
     },
 
     timeText: {
-        color: '#B5B0B0'
+        color: color.pink_swan
     },
 
     bottomLine: {
-        borderBottomColor: '#979797',
+        borderBottomColor: color.ford_gray,
         borderWidth: 1,
         marginTop: 20,
         marginLeft: 55

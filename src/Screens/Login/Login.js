@@ -16,6 +16,7 @@ import {
 } from "react-native-size-matters";
 import { LoginStyle } from "./LoginStyle";
 import WrapperContainer from "../../Components/WrapperContainer";
+import strings from "../../Constants/strings";
 
 export default function Login({ navigation }) {
   return (
@@ -25,8 +26,7 @@ export default function Login({ navigation }) {
       </View>
       <View style={LoginStyle.topTextView}>
         <Text style={{ color: "#9C9C9C", fontSize: 13, textAlign: "center" }}>
-          By clicking “Log In”, you agree with our Terms. Learn how we process
-          your data in our Privacy policy.
+          {strings.clickPrivacyPolicy}
         </Text>
       </View>
       <View style={LoginStyle.redBtnView}>
@@ -38,28 +38,28 @@ export default function Login({ navigation }) {
         />
       </View>
       <View style={LoginStyle.orView}>
-        <Text style={LoginStyle.orText}>or</Text>
+        <Text style={LoginStyle.orText}>{strings.or}</Text>
       </View>
       <View style={LoginStyle.whiteBtnView}>
         <WhiteButton
-          whiteBtnText={"Log In with Google"}
+          whiteBtnText={strings.loginGoogle}
           whiteBtnImage={ImagePath.googleIcon}
         />
         <WhiteButton
-          whiteBtnText={"Log In with Facebook"}
+          whiteBtnText={strings.loginFacebook}
           whiteBtnImage={ImagePath.facebookIcon}
         />
         <WhiteButton
-          whiteBtnText={"Log In with Apple"}
+          whiteBtnText={strings.loginApple}
           whiteBtnImage={ImagePath.appleIcon}
         />
       </View>
       <View style={LoginStyle.newSignUpView}>
         <View>
-          <Text style={LoginStyle.newHereText}>New here?</Text>
+          <Text style={LoginStyle.newHereText}>{strings.New_here}</Text>
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
-          <Text style={LoginStyle.signUpText}>Sign Up</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+          <Text style={LoginStyle.signUpText}>{strings.Sign_Up}</Text>
         </TouchableOpacity>
       </View>
     </WrapperContainer>
