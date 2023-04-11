@@ -1,32 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import GetStarted from "./src/Screens/GetStarted/GetStarted";
-import SignUp from "./src/Screens/SignUp/SignUp";
-import Splash from "./src/Screens/Splash/Splash";
-import Login1_1 from "./src/Screens/Login1_1/Login1_1";
-import SignUp1_1 from "./src/Screens/SignUp1_1/SignUp1_1";
-import SetPassword from "./src/Screens/SetPassword/SetPassword";
-import ChangePassword from "./src/Screens/ChangePassword/ChangePassword";
-import Login from "./src/Screens/Login/Login";
-import SelectLocation from "./src/Screens/SelectLocation/SelectLocation";
-import Search from "./src/Screens/Search/Search";
-import Home from "./src/Screens/Home/Home";
-import PostDetail from "./src/Screens/PostDetail/PostDetail";
-import Profile from "./src/Screens/Profile/Profile";
-import Notification from "./src/Screens/Notification/Notification";
-import EditProfile from "./src/Screens/EditProfile/EditProfile";
-import { NavigationContainer } from "@react-navigation/native";
-import { AuthStack } from "./src/Navigation/AuthStack";
-import { BottomTab } from "./src/Navigation/BottomTab";
-import { MainStack } from "./src/Navigation/MainStack";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Counter from "./src/Screens/Counter";
-import { Store } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";
 import { Routes } from "./src/Navigation/Routes";
 import { checkStatus } from "./src/redux/actions/loginAction";
 import { getApi, postApi } from "./src/utils/utils";
+
 
 export default function App() {
   let data = {
@@ -56,7 +34,6 @@ export default function App() {
   asycget();
 
   return (
-
     <Provider store={store}>
       <Routes />
     </Provider>

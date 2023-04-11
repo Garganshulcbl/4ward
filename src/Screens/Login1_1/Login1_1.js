@@ -8,6 +8,7 @@ import HeadText from "../../Components/HeadText";
 import { Login1_1Style } from "./Login1_1Style";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { checkStatus } from "../../redux/actions/loginAction";
+import WrapperContainer from "../../Components/WrapperContainer";
 
 // create a component
 
@@ -18,25 +19,25 @@ const Login1_1 = ({ navigation }) => {
   const [mobile, setmobile] = useState("");
   const [pass, setPass] = useState("");
 
-    function addMobile(val) {
-        if (val.match('^[0-9]*$'))
-            setmobile(val);
-    }
-
-  const storeLogin = async ()=> {
-    if(mobile!="" || pass !=""){
-      await  AsyncStorage.setItem('userCreds', (mobile,pass) )
-      console.log(mobile, pass, 'login1-1 page29')
-      // await  AsyncStorage.setItem('usermobile', (mobile) )
-     checkStatus(true)
-    }
-    else{
-      alert("Fields can't be empty...")
-    }
+  function addMobile(val) {
+    if (val.match("^[0-9]*$")) setmobile(val);
   }
 
+  const storeLogin = async () => {
+    if (mobile != "" || pass != "") {
+      await AsyncStorage.setItem("userCreds", (mobile, pass));
+      //console.log(mobile, pass, 'login1-1 page29')
+      // await  AsyncStorage.setItem('usermobile', (mobile) )
+      checkStatus(true);
+    }
+    //tried
+    else {
+      alert("Fields can't be empty...");
+    }
+  };
+
   return (
-    <View style={Login1_1Style.container}>
+    <WrapperContainer>
       <View>
         <TouchableOpacity
           onPress={() => {
@@ -93,7 +94,8 @@ const Login1_1 = ({ navigation }) => {
       <View style={Login1_1Style.lowerView}>
         <RedButton redBtnText="LOGIN" onPress={() => storeLogin()} />
       </View>
-    </View>
+      {/* </View> */}
+    </WrapperContainer>
   );
 };
 
