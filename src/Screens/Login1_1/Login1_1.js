@@ -86,7 +86,7 @@ const Login1_1 = ({ navigation }) => {
         </View>
         <View style={Login1_1Style.otpView}>
           <Text style={Login1_1Style.useOtpText}>{strings.Use_OTP}</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("SignUp")}> 
             <Text style={Login1_1Style.forgotPassText}>{strings.Forgot_Password}</Text>
           </TouchableOpacity>
         </View>

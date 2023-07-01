@@ -2,6 +2,8 @@ export default {
   BottomTab: "BottomTab",
   EditProfile: "EditProfile",
   ChangePassword: "ChangePassword",
+  Home: "Home",
+  
 
   //AuthStack
   GetStarted: "GetStarted",

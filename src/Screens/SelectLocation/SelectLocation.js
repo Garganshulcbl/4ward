@@ -11,8 +11,10 @@ import RedButton from "../../Components/RedButton";
 import { selectLocationStyle } from "./SelectLocationStyle";
 import WrapperContainer from "../../Components/WrapperContainer";
 import strings from "../../Constants/strings";
+import Home from "../Home/Home";
+import navigationString from "../../Constants/navigationString";
 
-export default function SelectLocation() {
+export default function SelectLocation({ navigation }) {
   return (
     <WrapperContainer>
       <View style={selectLocationStyle.topView}>
@@ -46,9 +48,11 @@ export default function SelectLocation() {
           <AddressFlatlist flatdata={FlatlistData} />
         </View>
       </View>
-      <View style={selectLocationStyle.bottomView}>
-        <RedButton redBtnText={strings.SELECT_PROCEED} />
-      </View>
+      <TouchableOpacity style={selectLocationStyle.bottomView}>
+      {console.log(navigationString.Home, 'navigationString')}
+        <RedButton redBtnText={strings.SELECT_PROCEED} onPress={() => {navigation.navigate(navigationString.Home)}
+        }  />
+      </TouchableOpacity>
     </WrapperContainer>
   );
 }

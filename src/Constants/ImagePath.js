@@ -23,7 +23,7 @@ export default {
     // Home
     homeImage: require('../Assets/Images/ic_home_icon.png'),
     locationIcon: require('../Assets/Images/ic_loc.png'),
-    homeImg: require('../Assets/Images/homeImg.png'),
+    // homeImg: require('../Assets/Images/homeImg.png'),
     directionIcon: require('../Assets/Images/ic_direction.png'),
 
     //Profile
@@ -36,5 +36,13 @@ export default {
     searchIcon: require('../Assets/Images/ic_srch.png'),
     addIcon: require('../Assets/Images/ic_add.png'),
     notificationIcon: require('../Assets/Images/ic_notify.png'),
+
+    // HomeCard Images
+
+    homeImg: require('../Assets/Images/HomeCard/homeImg.png'),
+    accident1: require('../Assets/Images/HomeCard/accident1.png'),
+    accident2: require('../Assets/Images/HomeCard/accident2.png'),
+    accident3: require('../Assets/Images/HomeCard/accident3.png'),
+    accident4: require('../Assets/Images/HomeCard/accident4.png'),
 
 }

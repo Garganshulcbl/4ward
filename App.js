@@ -4,34 +4,34 @@ import { store } from "./src/redux/store";
 import { Routes } from "./src/Navigation/Routes";
 import { checkStatus } from "./src/redux/actions/loginAction";
 import { getApi, postApi } from "./src/utils/utils";
-
-
-import Login1_1 from "./src/Screens/Login1_1/Login1_1";
-import Login from "./src/Screens/Login/Login";
+import { useEffect } from "react";
+import SelectLocation from "./src/Screens/SelectLocation/SelectLocation";
 
 export default function App() {
-  let data = {
-    username: "honey",
-    password: "12345678",
-    device_type: "android",
-    device_token: "12345",
-  };
+  useEffect(() => {
+    let data = {
+      username: "honey",
+      password: "12345678",
+      device_type: "android",
+      device_token: "12345",
+    };
 
-  // getApi("https://dev.bonkersapp.com/api/get-static-data")
-  //   .then((res) => console.log(res))
-  //   .catch((err) => console.log(err));
+    // getApi("https://dev.bonkersapp.com/api/get-static-data")
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
 
-  postApi("https://dev.bonkersapp.com/api/login", {}, data)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+    postApi("https://dev.bonkersapp.com/api/login", {}, data)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  });
 
   const asycget = async () => {
     const val = await AsyncStorage.getItem("userCreds");
     if (val) {
       checkStatus(true);
     }
-    // const val2 =  await AsyncStorage.getItem('usermobile')
-    // console.log(val,'abc');
+    const val2 = await AsyncStorage.getItem("usermobile");
+    // console.log(val, "abc");
   };
 
   asycget();

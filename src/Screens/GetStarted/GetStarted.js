@@ -19,7 +19,8 @@ const GetStarted = ({ navigation }) => {
     <WrapperContainer wrapperStyle={{paddingLeft:16,}}>
     {/* <View style={GetStartedStyle.container}> */}
       <ScrollView horizontal pagingEnabled >
-        <GetStartedCard/>
+        <GetStartedCard />
+        <GetStartedCard />
         <GetStartedCard />
       </ScrollView>
 

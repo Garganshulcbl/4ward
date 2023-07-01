@@ -60,7 +60,7 @@ const SignUp1_1 = ({ navigation }) => {
           <HeadText mainText={strings.EnterCode} />
         </View>
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}>
             <Text style={SignUp1_1Style.editNumText}>
               {strings.EditNum}
             </Text>

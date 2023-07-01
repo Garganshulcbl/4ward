@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 export function BottomTab() {
     // <NavigationContainer>
     return (
+        console.log('Bottomtab.js'),
         <Tab.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, tabBarStyle: { height: 60, backgroundColor: '#4C4C4C', borderTopLeftRadius: 8, borderTopLeftRadius: 8, position: 'absolute' }, tabBarShowLabel: false }}>
             <Tab.Screen name="Home" component={Home} options={{
                 tabBarIcon: () => {
@@ -50,5 +51,6 @@ export function BottomTab() {
                 }
             }} />
         </Tab.Navigator>
-    )    // </NavigationContainer>
+    ) 
+        {/* </NavigationContainer> */}
 }

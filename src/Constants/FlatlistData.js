@@ -58,21 +58,44 @@ export const FlatlistDataSearch = [
 export const homeData = [
   {
     userImg: ImagePath.appleIcon,
-    uName: "Russell Gordon",
+    uName: "Russell",
     address: "Sector 28D, Chandigarh",
     postedImg: ImagePath.homeImg,
     imgDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in turpis luctus.",
     timeText: "1 hr ago",
-    commentText: "Comments 1,254",
-    likesText: "Likes 44,686",
+    commentText: "Comments 102",
+    likesText: "Likes 980",
+    //bgclr: 'black'
+  },
+  {
+    userImg: ImagePath.appleIcon,
+    uName: "Lelia Walker",
+    address: "Sector 28D, Chandigarh",
+    postedImg: ImagePath.accident1,
+    imgDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in turpis luctus.",
+    timeText: "1 hr ago",
+    commentText: "Comments 121",
+    likesText: "Likes 1200",
+  },
+  {
+    userImg: ImagePath.addIcon,
+    uName: "Sheetal",
+    address: "Sector 28B, Chandigarh",
+    postedImg: ImagePath.accident2,
+    imgDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in turpis luctus.",
+    timeText: "2 hr ago",
+    commentText: "Comments 106",
+    likesText: "Likes 1007",
   },
 
   {
     userImg: ImagePath.googleIcon,
     uName: "Lelia Walker",
     address: "Sector 28D, Chandigarh",
-    postedImg: ImagePath.homeImg,
+    postedImg: ImagePath.accident3,
     imgDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in turpis luctus.",
     timeText: "1 hr ago",
@@ -84,7 +107,7 @@ export const homeData = [
     userImg: ImagePath.appleIcon,
     uName: "Russell Gordon",
     address: "Sector 28D, Chandigarh",
-    postedImg: ImagePath.homeImg,
+    postedImg: ImagePath.accident4,
     imgDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in turpis luctus.",
     timeText: "1 hr ago",
