@@ -26,7 +26,9 @@ export default function SelectLocation({ navigation }) {
           </View>
           <View style={selectLocationStyle.turnOnBtnView}>
             <TouchableOpacity>
-              <Text style={selectLocationStyle.turnOnText}>{strings.TURN_ON}</Text>
+              <Text style={selectLocationStyle.turnOnText}>
+                {strings.TURN_ON}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -42,16 +44,22 @@ export default function SelectLocation({ navigation }) {
           <TextBox placeholder={"Sector"} Show={"Enter location manually"} />
         </View>
         <View style={selectLocationStyle.suggestionsView}>
-          <Text style={selectLocationStyle.suggestionsText}>{strings.Suggestions}</Text>
+          <Text style={selectLocationStyle.suggestionsText}>
+            {strings.Suggestions}
+          </Text>
         </View>
         <View>
           <AddressFlatlist flatdata={FlatlistData} />
         </View>
       </View>
       <TouchableOpacity style={selectLocationStyle.bottomView}>
-      {console.log(navigationString.Home, 'navigationString')}
-        <RedButton redBtnText={strings.SELECT_PROCEED} onPress={() => {navigation.navigate(navigationString.Home)}
-        }  />
+        {console.log(navigationString.Home, "navigationString")}
+        <RedButton
+          redBtnText={strings.SELECT_PROCEED}
+          onPress={() => {
+            navigation.navigate(navigationString.Home);
+          }}
+        />
       </TouchableOpacity>
     </WrapperContainer>
   );
