@@ -13,8 +13,10 @@ import WrapperContainer from "../../Components/WrapperContainer";
 import strings from "../../Constants/strings";
 import Home from "../Home/Home";
 import navigationString from "../../Constants/navigationString";
+import { checkStatus } from "../../redux/actions/loginAction";
 
 export default function SelectLocation({ navigation }) {
+
   return (
     <WrapperContainer>
       <View style={selectLocationStyle.topView}>
@@ -53,13 +55,8 @@ export default function SelectLocation({ navigation }) {
         </View>
       </View>
       <TouchableOpacity style={selectLocationStyle.bottomView}>
-        {console.log(navigationString.Home, "navigationString")}
-        <RedButton
-          redBtnText={strings.SELECT_PROCEED}
-          onPress={() => {
-            navigation.navigate(navigationString.Home);
-          }}
-        />
+      {console.log(navigationString.Home, 'navigationString')}
+        <RedButton redBtnText={strings.SELECT_PROCEED} onPress={() => checkStatus(true)}  />
       </TouchableOpacity>
     </WrapperContainer>
   );
