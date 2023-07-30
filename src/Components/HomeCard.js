@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Image, Text, FlatList, StyleSheet } from "react-native";
+import { View, Image, Text, FlatList, StyleSheet, Button } from "react-native";
+
 import {
   moderateScale,
   moderateVerticalScale,
@@ -7,50 +8,73 @@ import {
 import ImagePath from "../Constants/ImagePath";
 import { homeData } from "../Constants/FlatlistData";
 import color from "../Constants/color";
+import { Share } from "react-native";
+import { TouchableOpacity } from "react-native";
+
+const url =
+  "https://www.google.com/maps/place/Chaog,+Himachal+Pradesh/data=!4m2!3m1!1s0x39057b4294ef1f37:0x8aaf03a3d4d1fb9c?sa=X&ved=2ahUKEwi7_Yno57aAAxUvS2wGHQlHDvYQ8gF6BAglEAA&ved=2ahUKEwi7_Yno57aAAxUvS2wGHQlHDvYQ8gF6BAgqEAI";
+const onShare = async () => {
+  try {
+    const result = await Share.share({
+      message: "Share Now" + "\n" + url,
+    });
+    if (result.action === Share.sharedAction) {
+      if (result.activityType) {
+        // shared with activity type of result.activityType
+      } else {
+        // shared
+      }
+    } else if (result.action === Share.dismissedAction) {
+      // dismissed
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
 const HomeCard = () => {
   return (
     // <View style={{borderBottom: 250}}>
-      <FlatList
-        data={homeData}
-        renderItem={({ item }) => (
-          <View style={styles.container}>
-            <View style={styles.headerView}>
-              <View style={styles.headerSubView}>
-                <View style={{ flexDirection: "row" }}>
-                  <Image source={item.userImg} style={styles.logoImg} />
-                  <View style={styles.nameAddressView}>
-                    <Text style={styles.unameText}>{item.uName}</Text>
-                    <Text style={styles.addressText}>{item.address}</Text>
-                  </View>
+    <FlatList
+      data={homeData}
+      renderItem={({ item }) => (
+        <View style={styles.container}>
+          <View style={styles.headerView}>
+            <View style={styles.headerSubView}>
+              <TouchableOpacity style={{ flexDirection: "row" }}>
+                <Image source={item.userImg} style={styles.logoImg} />
+                <View style={styles.nameAddressView}>
+                  <Text style={styles.unameText}>{item.uName}</Text>
+                  <Text style={styles.addressText}>{item.address}</Text>
                 </View>
-                <Image source={ImagePath.dotsIcon} style={styles.dotsIcon} />
-              </View>
-            </View>
-
-            <View style={styles.homeImgView}>
-              <Image source={item.postedImg} style={styles.homeImg} />
-            </View>
-
-            <View style={styles.mainDescriptionView}>
-              <View style={styles.descriptionView}>
-                <Text style={styles.descriptionText}>
-                  {item.imgDescription}
-                </Text>
-              </View>
-              <View style={styles.timeView}>
-                <Text style={styles.timeText}>{item.timeText}</Text>
-              </View>
-
-              <View style={styles.commentLikesView}>
-                <Text style={styles.commentLikes}>{item.commentText}</Text>
-                <Text style={styles.commentLikes}>{item.likesText}</Text>
-                <Image source={ImagePath.directionIcon} />
-              </View>
+              </TouchableOpacity>
+              <Image source={ImagePath.dotsIcon} style={styles.dotsIcon} />
             </View>
           </View>
-        )}
-      />
+
+          <View style={styles.homeImgView}>
+            <Image source={item.postedImg} style={styles.homeImg} />
+          </View>
+
+          <View style={styles.mainDescriptionView}>
+            <View style={styles.descriptionView}>
+              <Text style={styles.descriptionText}>{item.imgDescription}</Text>
+            </View>
+            <View style={styles.timeView}>
+              <Text style={styles.timeText}>{item.timeText}</Text>
+            </View>
+
+            <View style={styles.commentLikesView}>
+              <Text style={styles.commentLikes}>{item.commentText}</Text>
+              <Text style={styles.commentLikes}>{item.likesText}</Text>
+              <TouchableOpacity onPress={onShare}>
+                <Image source={ImagePath.directionIcon} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      )}
+    />
     // </View>
   );
 };
